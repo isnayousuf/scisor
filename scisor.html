@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            width: 100vw;
+        
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .holes{
+           margin-top: 2rem;
+            width: 6rem;
+            height: 5rem;
+            border: 10px solid black;
+            border-radius: 4rem 50% 40%;
+            position: relative;
+            box-shadow: 6px 6px 8px gray;
+            
+        }
+        .top{
+            transform: rotate(-5.7deg);
+        }
+        .bottom{
+            margin-top: 3rem;
+        }
+        .top::before{
+            content: '';
+            width: 8rem;
+            height: 2rem;
+            border: 2px solid black;
+            position: absolute;
+            right: 5.6rem;
+            top: 3.8rem;
+            z-index: -1;
+            transform: rotate(-25deg);
+            background: black;
+            border-radius: 2rem 0 0 2rem;
+            box-shadow: -6px 6px 10px gray;
+        }
+        .top::after{
+            content: '';
+            width: 18rem;
+            height: 2rem;
+            border: 2px solid black;
+            position: absolute;
+            right: 11.8rem;
+            top: 8.5rem;
+            z-index: -1;
+            box-shadow: 6px 6px 10px;
+            transform: rotate(-20deg);
+            border-radius: 0 0  0 10rem;
+            background: linear-gradient(90deg, #787878 0%, #b5b5b5 25%, #e3e3e3 50%, #b5b5b5 75%, #787878 100%);
+        }
+
+        .bottom::before{
+            content: '';
+            width: 8rem;
+            height: 2rem;
+            border: 2px solid black;
+            position: absolute;
+            right: 5.3rem;
+            top: -1.7rem;
+            z-index: -1;
+            transform: rotate(25deg);
+            background: black;
+            border-radius:1rem 0 0 3rem;
+            z-index: 2;
+            box-shadow: -3px 6px 10px gray;
+           
+        }
+        .bottom::after{
+            content: '';
+            width: 18rem;
+            height: 2rem;
+            border: 2px solid black;
+            position: absolute;
+            right: 11rem;
+            top: -6.3rem;
+            z-index: -3;
+            box-shadow: 6px 6px 10px black;
+            transform: rotate(25deg);
+            border-radius: 10rem 0  0 0;
+            background: linear-gradient(90deg, #787878 0%, #b5b5b5 25%, #e3e3e3 50%, #b5b5b5 75%, #787878 100%);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="holes top"></div>
+        <div class="holes bottom"></div>
+    </main>
+</body>
+</html>
